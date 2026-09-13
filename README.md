@@ -3,7 +3,9 @@
 > A lightweight, zero-dependency commercial static website engineered for high performance, accessibility, and strict front-end security standards.
 
 ---
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=codeintern16&repo=borderlessbjjweb&layout=compact&theme=dark)](https://github.com/codeintern16/borderlessbjjweb)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ## 🥋 Project Overview
 
 **Borderless BJJ (無界柔術)** 官方形象網站。有別於普遍使用肥大 CMS 或現代重型前端框架的傳統做法，本專案堅持以**純原生技術棧（Vanilla Web Standards）**手刻實現，旨在提供毫秒級的載入速度、極致的手機端觸控體驗，以及企業級的客戶端資安防禦策略。
