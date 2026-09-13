@@ -1,0 +1,156 @@
+/* ==========================================
+   Broadless BJJ - 關於道館 (place.css)
+   ========================================== */
+
+/* 1. 頁面頂部大黑 Banner (Hero) */
+.page-hero {
+    background-color: #121212;
+    padding: 120px 20px 60px; /* 預留上方固定 Header 的空間 */
+    text-align: center;
+    border-bottom: 3px solid #523621; /* 經典棕帶底邊 */
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    font-family: Georgia, serif;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #fcfbf9;
+    letter-spacing: 2px;
+    opacity: 0.85;
+}
+
+/* 2. 核心理念區塊 (Philosophy) */
+.philosophy-section {
+    padding: 80px 20px;
+    background-color: #fcfbf9;
+    text-align: center;
+}
+
+.container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sub-tag {
+    display: inline-block;
+    color: #523621;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #121212;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.philosophy-content p {
+    font-size: 1.05rem;
+    color: #4a4a4a;
+    line-height: 2;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* 3. 道館 3 大特色卡片 (Features) */
+.features-section {
+    padding: 60px 20px 100px;
+    background-color: #f4f2ed; /* 溫潤微灰米色 */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    border: 2px solid #121212;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(82, 54, 33, 0.2);
+    border-color: #523621;
+}
+
+.feature-num {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #523621;
+    font-family: Georgia, serif;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #121212;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.7;
+}   
+
+/* ==========================================
+   調整圖片容器：棕色邊框 + 16:9 完美比例裁切
+   ========================================== */
+.route-img-box {
+    position: relative;
+    /* 讓圖片跟卡片邊緣留出一點空間，看起來像裱框照片 */
+    width: calc(100% - 24px); 
+    margin: 12px auto 0; 
+    
+    /* 🌟 改用 aspect-ratio 控制比例！這裡預設 16:9 */
+    /* 如果你想讓照片高一點，直接把這行改成 aspect-ratio: 4 / 3; */
+    aspect-ratio: 16 / 9; 
+    
+    /* 給它一個經典棕帶色的實心邊框 */
+    border: 4px solid #523621; 
+    border-radius: 8px; /* 稍微給一點圓角，質感更好 */
+    
+    overflow: hidden; /* 確保超出的圖片被完美切掉 */
+    background-color: #121212; /* 圖片載入前的底色 */
+}
+
+/* 圖片本體：負責自動填滿 */
+.route-img-box img {
+    width: 100%;
+    height: 100%;
+    
+    /* 🌟 神奇魔法在這裡：自動等比例縮放並裁切填滿，絕不變形！ */
+    object-fit: cover; 
+    display: block;
+    
+    /* 加一點微轉場，hover的時侯可以做效果 */
+    transition: transform 0.4s ease; 
+}
+
+/* (可選) 滑鼠移到卡片上時，照片微微放大，超有質感 */
+.route-card:hover .route-img-box img {
+    transform: scale(1.08);
+}
