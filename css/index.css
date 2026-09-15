@@ -612,3 +612,107 @@ body {
         height: calc(100vh - 70px);
     }
 }
+
+.site-footer {
+    background-color: #0d0d0d;
+    color: #a0a0a0;
+    padding: 60px 20px 40px;
+    border-top: 1px solid #222;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr;
+    gap: 40px;
+}
+
+/* 標題與重點白字醒目 */
+.footer-col h4, .footer-logo {
+    color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+/* 預約體驗按鈕 */
+.footer-reserve-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.footer-reserve-btn:hover {
+    background: #d4d4d4;
+}
+
+/* 手機版自適應 */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+
+/* 桌機環境隱藏原生游標 */
+@media (hover: hover) and (pointer: fine) {
+    body, a, button, .tilt-card, .fab-btn {
+        cursor: none !important;
+    }
+}
+
+/* 核心小圓點：內白外黑、零延遲 */
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;               /* 內部純白 */
+    border: 1.5px solid #000000;             /* 外部黑圈邊框 */
+    box-sizing: content-box;                 /* 避免邊框壓縮內部白色半徑 */
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease;
+}
+
+/* 外層緩衝跟隨圈（已修復無效語法） */
+.cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.45);   /* 改為俐落的低飽和黑圈 */
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
+    transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, opacity 0.2s ease;
+}
+
+/* 懸停放大效果 */
+.cursor-ring.is-hover {
+    width: 56px;
+    height: 56px;
+    background-color: rgba(0, 0, 0, 0.08);   /* 微弱深色遮罩 */
+    border-color: rgba(0, 0, 0, 0.85);
+}
+
+/* 手機與觸控螢幕停用自訂鼠標 */
+@media (pointer: coarse) {
+    .cursor-dot, .cursor-ring {
+        display: none !important;
+    }
+}

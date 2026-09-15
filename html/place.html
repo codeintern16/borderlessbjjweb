@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="../css/place.css">
 </head>
 <body>
-
+    <!-- 0. 自訂鼠標元素 -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
     <!-- 1. 柔術棕帶 Header -->
     <header class="navbar">
         <div class="nav-container">
@@ -187,8 +189,42 @@
         </button>
     </div>
 
+    <!-- 頁面底部黑條 -->
+    <footer class="site-footer">
+        <div class="footer-container">
+        
+            <!-- 左：品牌與精神 -->
+            <div class="footer-col footer-brand">
+                <h3 class="footer-logo">BORDERLESS BJJ</h3>
+                <p class="footer-slogan">ROLL WITHOUT LIMITS.</p>
+                <p class="copyright">&copy; 2026 Borderless Studio. All Rights Reserved.</p>
+            </div>
+
+            <!-- 中：營運與地點核心資訊 -->
+            <div class="footer-col footer-info">
+                <h4>LOCATION & HOURS</h4>
+                <p><i class="icon-loc"></i> 台北市中山區（捷運中山國中站 步行 5 分鐘）</p>
+                <p><i class="icon-time"></i> 週一至週日 10:00 - 22:00（詳見課表）</p>
+                <p><i class="icon-mail"></i> contact@borderlessbjj.com</p>
+            </div>
+
+            <!-- 右：社群與行動 CTA -->
+            <div class="footer-col footer-actions">
+                <h4>CONNECT</h4>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/borderlessjiujitsu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                    <a href="https://www.facebook.com/borderlessjiujitsu/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+                    <a href="https://open.spotify.com/show/1P2QQVMFtGvqf528ZZ8m6Z" target="_blank" rel="noopener noreferrer" aria-label="Spotify">Podcast</a>
+                </div>
+                <a href="html/contact.html" class="footer-reserve-btn">立即預約體驗</a>
+            </div>
+
+        </div>
+    </footer>
+
     <!-- 6. 引入 JS -->
     <script src="../javascript/rolltop.js"></script>
     <script src="../javascript/hamburger.js"></script>
+    <script src="../javascript/cursor.js"></script>
 </body>
 </html>

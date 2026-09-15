@@ -8,10 +8,22 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borderless BJJ</title>
+    <title>Borderless BJJ | 無界柔術運動工作室</title>
+
+    <!-- 基礎 SEO & 社群分享卡片 (LINE / IG 預覽) -->
+    <meta name="description" content="Borderless BJJ 無界柔術運動工作室，鄰近捷運中山國中站。提供巴西柔術 (BJJ)、綜合格鬥 (MMA)、角力與重量訓練，歡迎新手預約體驗。">
+    <meta property="og:title" content="Borderless BJJ | 無界柔術運動工作室">
+    <meta property="og:description" content="台北市中山區格鬥訓練首選，提供巴西柔術、綜合格鬥與體能訓練。">
+    <meta property="og:image" content="image/logo1.png">
+    <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+
+    <!-- 0. 自訂鼠標元素 (必須存在於 body 內) -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
     <!-- 1. 柔術棕帶 Header -->
     <header class="navbar">
@@ -149,9 +161,43 @@
         </button>
     </div>
 
+    <!-- 頁面底部黑條 -->
+    <footer class="site-footer">
+        <div class="footer-container">
+        
+            <!-- 左：品牌與精神 -->
+            <div class="footer-col footer-brand">
+                <h3 class="footer-logo">BORDERLESS BJJ</h3>
+                <p class="footer-slogan">ROLL WITHOUT LIMITS.</p>
+                <p class="copyright">&copy; 2026 Borderless Studio. All Rights Reserved.</p>
+            </div>
+
+            <!-- 中：營運與地點核心資訊 -->
+            <div class="footer-col footer-info">
+                <h4>LOCATION & HOURS</h4>
+                <p><i class="icon-loc"></i> 台北市中山區（捷運中山國中站 步行 5 分鐘）</p>
+                <p><i class="icon-time"></i> 週一至週日 10:00 - 22:00（詳見課表）</p>
+                <p><i class="icon-mail"></i> contact@borderlessbjj.com</p>
+            </div>
+
+            <!-- 右：社群與行動 CTA -->
+            <div class="footer-col footer-actions">
+                <h4>CONNECT</h4>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/borderlessjiujitsu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                    <a href="https://www.facebook.com/borderlessjiujitsu/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+                    <a href="https://open.spotify.com/show/1P2QQVMFtGvqf528ZZ8m6Z" target="_blank" rel="noopener noreferrer" aria-label="Spotify">Podcast</a>
+                </div>
+                <a href="html/contact.html" class="footer-reserve-btn">立即預約體驗</a>
+            </div>
+
+        </div>
+    </footer>
+
     <!-- 6. 腳本區塊 -->
     <script src="javascript/rolltop.js"></script>
     <script src="javascript/hamburger.js"></script>
+    <script src="javascript/cursor.js"></script>
 
 </body>
 </html>
